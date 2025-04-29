@@ -3,6 +3,7 @@
 
 CMakeFiles/maze_game.dir/src/Button.cpp.o: /home/aimal/Downloads/maze_game/src/Button.cpp \
   /home/aimal/Downloads/maze_game/include/Button.hpp \
+  /home/aimal/Downloads/maze_game/include/ResourceManager.hpp \
   /usr/include/SFML/Config.hpp \
   /usr/include/SFML/Graphics.hpp \
   /usr/include/SFML/Graphics/BlendMode.hpp \
@@ -83,11 +84,17 @@ CMakeFiles/maze_game.dir/src/Button.cpp.o: /home/aimal/Downloads/maze_game/src/B
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/c++/13/algorithm \
+  /usr/include/c++/13/array \
+  /usr/include/c++/13/backward/auto_ptr.h \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
   /usr/include/c++/13/bits/algorithmfwd.h \
+  /usr/include/c++/13/bits/align.h \
   /usr/include/c++/13/bits/alloc_traits.h \
+  /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/atomic_base.h \
+  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
   /usr/include/c++/13/bits/basic_ios.h \
   /usr/include/c++/13/bits/basic_ios.tcc \
   /usr/include/c++/13/bits/basic_string.h \
@@ -99,6 +106,7 @@ CMakeFiles/maze_game.dir/src/Button.cpp.o: /home/aimal/Downloads/maze_game/src/B
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
@@ -106,8 +114,11 @@ CMakeFiles/maze_game.dir/src/Button.cpp.o: /home/aimal/Downloads/maze_game/src/B
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
+  /usr/include/c++/13/bits/hashtable.h \
+  /usr/include/c++/13/bits/hashtable_policy.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/ios_base.h \
+  /usr/include/c++/13/bits/istream.tcc \
   /usr/include/c++/13/bits/locale_classes.h \
   /usr/include/c++/13/bits/locale_classes.tcc \
   /usr/include/c++/13/bits/locale_conv.h \
@@ -130,7 +141,11 @@ CMakeFiles/maze_game.dir/src/Button.cpp.o: /home/aimal/Downloads/maze_game/src/B
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
+  /usr/include/c++/13/bits/shared_ptr.h \
+  /usr/include/c++/13/bits/shared_ptr_atomic.h \
+  /usr/include/c++/13/bits/shared_ptr_base.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_function.h \
   /usr/include/c++/13/bits/stl_algo.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
@@ -143,6 +158,7 @@ CMakeFiles/maze_game.dir/src/Button.cpp.o: /home/aimal/Downloads/maze_game/src/B
   /usr/include/c++/13/bits/stl_map.h \
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
@@ -153,6 +169,8 @@ CMakeFiles/maze_game.dir/src/Button.cpp.o: /home/aimal/Downloads/maze_game/src/B
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
   /usr/include/c++/13/bits/uniform_int_dist.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
+  /usr/include/c++/13/bits/unordered_map.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
@@ -160,6 +178,7 @@ CMakeFiles/maze_game.dir/src/Button.cpp.o: /home/aimal/Downloads/maze_game/src/B
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
+  /usr/include/c++/13/compare \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
@@ -172,19 +191,25 @@ CMakeFiles/maze_game.dir/src/Button.cpp.o: /home/aimal/Downloads/maze_game/src/B
   /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
   /usr/include/c++/13/ext/atomicity.h \
+  /usr/include/c++/13/ext/concurrence.h \
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/functional \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/iostream \
+  /usr/include/c++/13/istream \
   /usr/include/c++/13/iterator \
   /usr/include/c++/13/locale \
   /usr/include/c++/13/map \
+  /usr/include/c++/13/memory \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/execution_defs.h \
   /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/13/pstl/glue_memory_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
@@ -194,6 +219,7 @@ CMakeFiles/maze_game.dir/src/Button.cpp.o: /home/aimal/Downloads/maze_game/src/B
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/unordered_map \
   /usr/include/c++/13/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -709,6 +735,7 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/c++/13/algorithm \
+  /usr/include/c++/13/array \
   /usr/include/c++/13/backward/auto_ptr.h \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
@@ -731,6 +758,7 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
   /usr/include/c++/13/bits/deque.tcc \
+  /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
@@ -738,6 +766,8 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
+  /usr/include/c++/13/bits/hashtable.h \
+  /usr/include/c++/13/bits/hashtable_policy.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/ios_base.h \
   /usr/include/c++/13/bits/istream.tcc \
@@ -771,6 +801,7 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/c++/13/bits/specfun.h \
   /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_function.h \
   /usr/include/c++/13/bits/stl_algo.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
@@ -798,6 +829,7 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/c++/13/bits/stringfwd.h \
   /usr/include/c++/13/bits/uniform_int_dist.h \
   /usr/include/c++/13/bits/unique_ptr.h \
+  /usr/include/c++/13/bits/unordered_map.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
@@ -806,6 +838,7 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
+  /usr/include/c++/13/compare \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
@@ -824,6 +857,7 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/functional \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
@@ -865,6 +899,7 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/unordered_map \
   /usr/include/c++/13/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -1685,6 +1720,7 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/c++/13/algorithm \
+  /usr/include/c++/13/array \
   /usr/include/c++/13/backward/auto_ptr.h \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
@@ -1706,6 +1742,7 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
@@ -1713,6 +1750,8 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
+  /usr/include/c++/13/bits/hashtable.h \
+  /usr/include/c++/13/bits/hashtable_policy.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/ios_base.h \
   /usr/include/c++/13/bits/istream.tcc \
@@ -1742,6 +1781,7 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
   /usr/include/c++/13/bits/shared_ptr_atomic.h \
   /usr/include/c++/13/bits/shared_ptr_base.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_function.h \
   /usr/include/c++/13/bits/stl_algo.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
@@ -1766,6 +1806,7 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
   /usr/include/c++/13/bits/stringfwd.h \
   /usr/include/c++/13/bits/uniform_int_dist.h \
   /usr/include/c++/13/bits/unique_ptr.h \
+  /usr/include/c++/13/bits/unordered_map.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
@@ -1773,6 +1814,7 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
+  /usr/include/c++/13/compare \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
@@ -1789,6 +1831,7 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/functional \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
@@ -1812,6 +1855,7 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/unordered_map \
   /usr/include/c++/13/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -1922,35 +1966,13 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/c++/13/pstl/glue_numeric_defs.h:
 
-/usr/include/c++/13/istream:
-
-/usr/include/c++/13/iostream:
-
-/usr/include/c++/13/ext/concurrence.h:
-
 /usr/include/c++/13/cstdint:
 
-/usr/include/c++/13/bits/stl_raw_storage_iter.h:
-
 /usr/include/c++/13/bits/stl_deque.h:
-
-/usr/include/c++/13/bits/shared_ptr_atomic.h:
-
-/usr/include/c++/13/bits/shared_ptr.h:
 
 /usr/include/c++/13/bits/random.h:
 
 /usr/include/c++/13/bits/deque.tcc:
-
-/usr/include/c++/13/bits/atomic_lockfree_defines.h:
-
-/usr/include/c++/13/bits/atomic_base.h:
-
-/usr/include/c++/13/bits/align.h:
-
-/usr/include/c++/13/backward/auto_ptr.h:
-
-/home/aimal/Downloads/maze_game/include/ResourceManager.hpp:
 
 /home/aimal/Downloads/maze_game/include/PowerUp.hpp:
 
@@ -2046,37 +2068,51 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/usr/include/c++/13/bits/predefined_ops.h:
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
-/usr/include/c++/13/iosfwd:
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
-/usr/include/c++/13/bits/ostream.tcc:
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
-/usr/include/c++/13/bits/uses_allocator_args.h:
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
-/usr/include/c++/13/bits/postypes.h:
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
-/usr/include/c++/13/bits/std_abs.h:
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
-/usr/include/c++/13/bits/uses_allocator.h:
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/c++/13/bits/locale_facets_nonio.h:
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
-/usr/include/c++/13/bits/istream.tcc:
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
 
-/usr/include/c++/13/bits/locale_conv.h:
+/usr/include/c++/13/bits/locale_classes.h:
 
 /usr/include/SFML/Graphics/RenderStates.hpp:
 
-/home/aimal/Downloads/maze_game/src/PowerUp.cpp:
-
-/usr/include/c++/13/bits/shared_ptr_base.h:
-
-/usr/include/wchar.h:
-
 /usr/include/c++/13/bits/invoke.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/usr/include/c++/13/bits/hashtable.h:
 
 /usr/include/c++/13/bits/functional_hash.h:
 
@@ -2086,15 +2122,21 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/errno.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/c++/13/bits/node_handle.h:
-
 /usr/include/c++/13/bits/functexcept.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/include/c++/13/bits/exception_ptr.h:
+
+/usr/include/c++/13/bits/locale_conv.h:
+
+/usr/include/c++/13/bits/istream.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/c++/13/bits/stl_multimap.h:
+
+/usr/include/c++/13/bits/stream_iterator.h:
 
 /home/aimal/Downloads/maze_game/include/GameInfo.hpp:
 
@@ -2104,19 +2146,15 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/c++/13/streambuf:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
 /usr/include/c++/13/bits/cxxabi_init_exception.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/SFML/Window/Export.hpp:
 
 /usr/include/c++/13/typeinfo:
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
-/usr/include/c++/13/bits/concept_check.h:
-
-/usr/include/c++/13/bits/alloc_traits.h:
 
 /usr/include/c++/13/bits/basic_string.h:
 
@@ -2130,15 +2168,41 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/c++/13/bits/basic_ios.h:
 
-/usr/include/x86_64-linux-gnu/bits/time64.h:
+/usr/include/c++/13/bits/atomic_lockfree_defines.h:
 
-/usr/include/c++/13/bits/allocator.h:
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/c++/13/bits/concept_check.h:
+
+/usr/include/c++/13/bits/alloc_traits.h:
+
+/usr/include/c++/13/bits/atomic_base.h:
+
+/usr/include/c++/13/bits/uses_allocator_args.h:
 
 /usr/include/c++/13/bits/stl_bvector.h:
 
+/usr/include/SFML/System/Clock.hpp:
+
+/usr/include/c++/13/clocale:
+
+/usr/include/c++/13/bits/align.h:
+
+/usr/include/c++/13/deque:
+
+/usr/include/SFML/System/ThreadLocalPtr.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+
+/usr/include/c++/13/bits/unique_ptr.h:
+
 /usr/include/c++/13/backward/binders.h:
 
+/usr/include/c++/13/backward/auto_ptr.h:
+
 /usr/include/c++/13/bits/hash_bytes.h:
+
+/usr/include/c++/13/array:
 
 /usr/include/c++/13/bits/basic_string.tcc:
 
@@ -2147,8 +2211,6 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 /usr/include/c++/13/bit:
 
 /usr/include/alloca.h:
-
-/usr/include/c++/13/bits/memoryfwd.h:
 
 /usr/include/SFML/Window/WindowStyle.hpp:
 
@@ -2160,17 +2222,9 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/SFML/Window/Sensor.hpp:
 
-/usr/include/c++/13/bits/move.h:
-
-/usr/include/SFML/Graphics/RenderWindow.hpp:
-
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/SFML/Window/Mouse.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
@@ -2198,6 +2252,8 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/SFML/Graphics/VertexBuffer.hpp:
 
+/usr/include/c++/13/bits/shared_ptr_atomic.h:
+
 /usr/include/c++/13/vector:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
@@ -2216,11 +2272,9 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/c++/13/algorithm:
 
-/usr/include/c++/13/bits/ptr_traits.h:
-
-/usr/include/SFML/Graphics/Text.hpp:
-
 /usr/include/SFML/Graphics/Sprite.hpp:
+
+/usr/include/c++/13/bits/enable_special_members.h:
 
 /usr/include/SFML/Graphics/Export.hpp:
 
@@ -2240,10 +2294,6 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/SFML/System/String.hpp:
 
-/usr/include/c++/13/deque:
-
-/usr/include/SFML/System/ThreadLocalPtr.hpp:
-
 /usr/include/SFML/Graphics/Rect.inl:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
@@ -2256,9 +2306,11 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/c++/13/bits/range_access.h:
 
-/usr/include/c++/13/system_error:
-
 /home/aimal/Downloads/maze_game/src/Button.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
 
 /usr/include/c++/13/bits/locale_facets_nonio.tcc:
 
@@ -2268,11 +2320,55 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/SFML/Graphics/Image.hpp:
 
+/usr/include/SFML/Window/VideoMode.hpp:
+
+/usr/include/SFML/Graphics/Font.hpp:
+
+/usr/include/c++/13/bits/specfun.h:
+
+/usr/include/c++/13/bits/streambuf.tcc:
+
+/home/aimal/Downloads/maze_game/include/ResourceManager.hpp:
+
+/usr/include/SFML/System/Thread.hpp:
+
+/usr/include/SFML/System/Export.hpp:
+
+/usr/include/c++/13/sstream:
+
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
+/usr/include/SFML/Graphics/VertexArray.hpp:
+
+/home/aimal/Downloads/maze_game/src/MazeGame.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/SFML/Graphics/PrimitiveType.hpp:
+
+/usr/include/c++/13/memory:
+
+/usr/include/SFML/System/Sleep.hpp:
+
+/usr/include/features.h:
+
+/usr/include/SFML/System/Vector3.hpp:
+
+/usr/include/c++/13/bits/hashtable_policy.h:
+
 /usr/include/SFML/Graphics/Shape.hpp:
 
 /usr/include/SFML/Graphics/Drawable.hpp:
 
 /usr/include/c++/13/bits/vector.tcc:
+
+/usr/include/c++/13/bits/locale_facets.h:
+
+/usr/include/SFML/System/MemoryInputStream.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/SFML/Graphics/Rect.hpp:
 
@@ -2282,17 +2378,15 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
 
-/usr/include/c++/13/bits/unique_ptr.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
-
 /usr/include/SFML/Graphics/CircleShape.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/usr/include/SFML/System/Export.hpp:
+/usr/include/math.h:
 
-/usr/include/SFML/System/Thread.hpp:
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/SFML/Graphics/Transform.hpp:
 
 /usr/include/c++/13/bits/sstream.tcc:
 
@@ -2302,31 +2396,15 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/c++/13/bits/exception_defines.h:
 
-/usr/include/SFML/Window/VideoMode.hpp:
-
-/usr/include/SFML/Graphics/Font.hpp:
-
-/usr/include/c++/13/bits/specfun.h:
-
-/usr/include/c++/13/bits/streambuf.tcc:
-
 /usr/include/SFML/Window/Vulkan.hpp:
 
-/usr/include/c++/13/bits/locale_facets.h:
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
 
-/usr/include/SFML/System/MemoryInputStream.hpp:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/usr/include/x86_64-linux-gnu/bits/locale.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
-
-/usr/include/c++/13/bits/char_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-
-/usr/include/SFML/System/Clock.hpp:
-
-/usr/include/c++/13/clocale:
+/usr/include/SFML/Graphics/RectangleShape.hpp:
 
 /usr/include/SFML/Window/Cursor.hpp:
 
@@ -2352,19 +2430,9 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/SFML/System/Utf.inl:
 
-/usr/include/c++/13/memory:
-
-/usr/include/SFML/System/Sleep.hpp:
-
-/usr/include/features.h:
-
-/usr/include/SFML/System/Vector3.hpp:
-
 /usr/include/SFML/Graphics/Transformable.hpp:
 
 /usr/include/SFML/Graphics/View.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
@@ -2388,8 +2456,6 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/SFML/Window/WindowBase.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
 
 /usr/include/SFML/System/InputStream.hpp:
@@ -2404,6 +2470,8 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/c++/13/bits/cxxabi_forced.h:
 
+/usr/include/c++/13/istream:
+
 /usr/include/SFML/Graphics.hpp:
 
 /usr/include/c++/13/bits/localefwd.h:
@@ -2414,23 +2482,61 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/SFML/Graphics/Shader.hpp:
 
+/usr/include/SFML/Graphics/RenderWindow.hpp:
+
+/usr/include/c++/13/bits/move.h:
+
 /usr/include/SFML/System/Time.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/c++/13/bits/charconv.h:
 
 /usr/include/c++/13/cstdio:
 
-/home/aimal/Downloads/maze_game/src/MazeGame.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/usr/include/SFML/Graphics/PrimitiveType.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
 /usr/include/SFML/System/Vector2.hpp:
+
+/usr/include/c++/13/iostream:
+
+/usr/include/c++/13/bits/memoryfwd.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/c++/13/bits/node_handle.h:
+
+/usr/include/c++/13/bits/ostream.tcc:
+
+/usr/include/c++/13/bits/postypes.h:
+
+/usr/include/c++/13/bits/std_abs.h:
+
+/usr/include/c++/13/bits/uses_allocator.h:
+
+/usr/include/c++/13/bits/predefined_ops.h:
+
+/usr/include/c++/13/iosfwd:
+
+/usr/include/SFML/Graphics/Text.hpp:
+
+/usr/include/c++/13/bits/ptr_traits.h:
 
 /usr/include/c++/13/bits/refwrap.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+/usr/include/c++/13/bits/shared_ptr.h:
+
+/home/aimal/Downloads/maze_game/src/PowerUp.cpp:
+
+/usr/include/wchar.h:
+
+/usr/include/c++/13/bits/shared_ptr_base.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
+
+/usr/include/c++/13/bits/char_traits.h:
+
+/usr/include/c++/13/bits/std_function.h:
+
+/usr/include/c++/13/cstdlib:
 
 /usr/include/c++/13/bits/stl_algo.h:
 
@@ -2448,9 +2554,9 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/c++/13/bits/stl_heap.h:
 
-/usr/include/c++/13/bits/stl_tempbuf.h:
+/usr/include/c++/13/bits/stl_raw_storage_iter.h:
 
-/usr/include/c++/13/bits/stream_iterator.h:
+/usr/include/c++/13/bits/stl_tempbuf.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
@@ -2464,6 +2570,8 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/c++/13/bits/uniform_int_dist.h:
 
+/usr/include/c++/13/bits/unordered_map.h:
+
 /usr/include/SFML/Window/Clipboard.hpp:
 
 /usr/include/c++/13/cctype:
@@ -2472,7 +2580,9 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/c++/13/ext/atomicity.h:
 
-/usr/include/c++/13/cstdlib:
+/usr/include/c++/13/system_error:
+
+/usr/include/c++/13/compare:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -2502,27 +2612,29 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/c++/13/new:
 
+/usr/include/c++/13/ext/concurrence.h:
+
+/usr/include/SFML/System/Err.hpp:
+
+/usr/include/c++/13/pstl/glue_algorithm_defs.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/c++/13/bits/stl_iterator.h:
 
 /usr/include/c++/13/ext/numeric_traits.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
 /usr/include/c++/13/ext/string_conversions.h:
 
 /usr/include/c++/13/ext/type_traits.h:
+
+/usr/include/c++/13/functional:
 
 /usr/include/c++/13/tr1/bessel_function.tcc:
 
 /usr/include/c++/13/initializer_list:
 
 /usr/include/c++/13/ios:
-
-/usr/include/SFML/System/Err.hpp:
-
-/usr/include/c++/13/pstl/glue_algorithm_defs.h:
 
 /usr/include/c++/13/pstl/pstl_config.h:
 
@@ -2542,17 +2654,21 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/features-time64.h:
 
-/usr/include/c++/13/bits/nested_exception.h:
-
 /usr/include/SFML/System/Thread.inl:
 
 /usr/include/SFML/System/Vector2.inl:
+
+/usr/include/c++/13/bits/nested_exception.h:
 
 /usr/include/c++/13/tuple:
 
 /usr/include/SFML/Window/GlResource.hpp:
 
 /usr/include/c++/13/type_traits:
+
+/usr/include/c++/13/bits/allocator.h:
+
+/usr/include/c++/13/unordered_map:
 
 /usr/include/ctype.h:
 
@@ -2574,8 +2690,6 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/stdlib.h:
 
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
@@ -2591,55 +2705,3 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 /usr/include/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/include/SFML/Graphics/RectangleShape.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/SFML/Window/Export.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/c++/13/bits/locale_classes.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/include/math.h:
-
-/usr/include/SFML/Graphics/Transform.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/usr/include/c++/13/bits/stl_multimap.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
-/usr/include/c++/13/bits/charconv.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/c++/13/sstream:
-
-/usr/include/SFML/Graphics/VertexArray.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
