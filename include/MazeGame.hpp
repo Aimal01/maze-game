@@ -15,8 +15,21 @@ public:
     void run();
 
 private:
-    enum class GameState { MENU, PLAYING, PAUSED, GAME_OVER, EDITOR };
-    enum class Difficulty { EASY, MEDIUM, HARD, CUSTOM };
+    enum class GameState { 
+        MENU, 
+        PLAYING, 
+        PAUSED, 
+        GAME_OVER, 
+        EDITOR, 
+        DIFFICULTY_SELECT  // Added this state
+    };
+    
+    enum class Difficulty { 
+        EASY, 
+        MEDIUM, 
+        HARD, 
+        CUSTOM 
+    };
 
     struct GameStats {
         int moveCount = 0;
@@ -37,7 +50,7 @@ private:
     std::vector<PowerUp> powerUps;
     std::vector<Enemy> enemies;
     ParticleSystem particles;
-    float cellSize = 20.0f;
+    float cellSize;
 
     // SFML objects
     sf::RenderWindow window;
@@ -56,10 +69,12 @@ private:
     // Input handling
     void handleInput();
     void handleKeyPress(sf::Keyboard::Key key);
+    void handleDifficultySelection();
 
     // Update functions
     void update(float deltaTime);
     void updateAchievements();
+    void updateScore();
 
     // Render functions
     void render();
@@ -67,6 +82,8 @@ private:
     void drawUI();
     void drawMinimap();
     void drawEntities();
+    void drawDifficultyMenu();
+    void drawGameOver();
 
     // Game logic
     void generateMaze();
