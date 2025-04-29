@@ -15,7 +15,7 @@ MazeGame::MazeGame()
     , difficulty(Difficulty::MEDIUM)
     , showSolution(false)
     , cellSize(GameConstants::BASE_CELL_SIZE)
-    , stats{0, 0.0f, 0, 0, 0} {  // Initialize GameStats
+    , stats() {
     std::srand(static_cast<unsigned>(std::time(nullptr)));
     initialize();
 }
@@ -47,29 +47,28 @@ void MazeGame::loadHighScore() {
 }
 
 void MazeGame::initialize() {
-    // Create window with current user from GameInfo
     window.create(sf::VideoMode(GameConstants::SCREEN_WIDTH, GameConstants::SCREEN_HEIGHT),
                  "Maze Game - " + GameInfo::CURRENT_USER);
     window.setFramerateLimit(60);
 
-    // Initialize views
     gameView = window.getDefaultView();
     minimapView = sf::View(sf::FloatRect(0, 0, GameConstants::SCREEN_WIDTH, GameConstants::SCREEN_HEIGHT));
     minimapView.setViewport(sf::FloatRect(0.75f, 0.0f, 0.25f, 0.25f));
 
-    // Initialize UI
     createButtons();
     
-    // Initialize text
     statusText.setFont(ResourceManager::getInstance().getFont());
     statusText.setCharacterSize(20);
     statusText.setFillColor(sf::Color::White);
     statusText.setPosition(10.f, 10.f);
 
-    // Load the high score
     loadHighScore();
-
     GameInfo::printGameInfo();
+}
+
+void MazeGame::startNewGame() {
+    stats.resetForNewGame();
+    generateMaze();
 }
 
 void MazeGame::createButtons() {
@@ -81,8 +80,7 @@ void MazeGame::createButtons() {
     std::vector<std::pair<std::string, sf::Color>> difficultyInfo = {
         {"Easy", sf::Color(76, 175, 80)},      // Green
         {"Medium", sf::Color(255, 152, 0)},    // Orange
-        {"Hard", sf::Color(244, 67, 54)},      // Red
-        {"Custom", sf::Color(156, 39, 176)}    // Purple
+        {"Hard", sf::Color(244, 67, 54)}       // Red
     };
 
     float currentY = startY;
@@ -148,16 +146,14 @@ void MazeGame::handleDifficultySelection() {
                     case 0: difficulty = Difficulty::EASY; break;
                     case 1: difficulty = Difficulty::MEDIUM; break;
                     case 2: difficulty = Difficulty::HARD; break;
-                    case 3: difficulty = Difficulty::CUSTOM; break;
                 }
                 state = GameState::PLAYING;
-                generateMaze();
+                startNewGame();
                 return;
             }
         }
     }
 
-    // Update button hover states
     for (auto& button : buttons) {
         button->update(window);
     }
@@ -179,6 +175,7 @@ void MazeGame::handleKeyPress(sf::Keyboard::Key key) {
     if (state == GameState::GAME_OVER) {
         if (key == sf::Keyboard::Escape) {
             state = GameState::DIFFICULTY_SELECT;
+            stats.resetForNewGame();
             return;
         }
         return;
@@ -210,7 +207,7 @@ void MazeGame::handleKeyPress(sf::Keyboard::Key key) {
         case sf::Keyboard::Space: showSolution = !showSolution; break;
         case sf::Keyboard::Escape: state = GameState::PAUSED; break;
         case sf::Keyboard::R: 
-            generateMaze();
+            startNewGame();
             break;
         default: break;
     }
@@ -220,6 +217,8 @@ void MazeGame::handleKeyPress(sf::Keyboard::Key key) {
         if (newPos == endPos) {
             updateScore();
             generateMaze();
+            stats.moveCount = 0;
+            stats.timeElapsed = 0.0f;
         }
     }
 }
@@ -234,7 +233,6 @@ void MazeGame::update(float deltaTime) {
         case Difficulty::EASY: speedMultiplier = 1.0f; break;
         case Difficulty::MEDIUM: speedMultiplier = 1.5f; break;
         case Difficulty::HARD: speedMultiplier = 2.0f; break;
-        case Difficulty::CUSTOM: speedMultiplier = 1.25f; break;
     }
     
     for (auto& enemy : enemies) {
@@ -257,7 +255,6 @@ void MazeGame::render() {
         window.setView(gameView);
         drawMaze();
         
-        // Draw entities
         for (const auto& powerup : powerUps) {
             powerup.draw(window, cellSize);
         }
@@ -266,7 +263,6 @@ void MazeGame::render() {
             enemy.draw(window, cellSize);
         }
 
-        // Draw UI
         std::stringstream ss;
         ss << "Score: " << stats.score << "\n"
            << "Time: " << static_cast<int>(stats.timeElapsed) << "s\n"
@@ -280,7 +276,6 @@ void MazeGame::render() {
         statusText.setString(ss.str());
         window.draw(statusText);
 
-        // Draw minimap
         window.setView(minimapView);
         drawMaze();
     }
@@ -311,7 +306,6 @@ void MazeGame::drawGameOver() {
 void MazeGame::drawDifficultyMenu() {
     window.clear(sf::Color(30, 30, 30));
 
-    // Draw title
     sf::Text title;
     title.setFont(ResourceManager::getInstance().getFont());
     title.setString("Select Difficulty");
@@ -326,7 +320,6 @@ void MazeGame::drawDifficultyMenu() {
 
     window.draw(title);
 
-    // Draw buttons
     for (const auto& button : buttons) {
         button->draw(window);
     }
@@ -360,7 +353,6 @@ void MazeGame::drawMaze() {
 }
 
 void MazeGame::generateMaze() {
-    // Set maze size based on difficulty
     int width, height;
     switch (difficulty) {
         case Difficulty::EASY:
@@ -372,18 +364,13 @@ void MazeGame::generateMaze() {
         case Difficulty::HARD:
             width = height = 31;
             break;
-        case Difficulty::CUSTOM:
-            width = height = 25;
-            break;
     }
     
     maze = std::vector<std::vector<char>>(height, std::vector<char>(width, '#'));
     
-    // Start and end positions
     playerPos = Point(1, 1);
     endPos = Point(width - 2, height - 2);
     
-    // Create a path from start to end using recursive backtracking
     std::vector<std::vector<bool>> visited(height, std::vector<bool>(width, false));
     std::stack<Point> stack;
     Point current = playerPos;
@@ -423,11 +410,9 @@ void MazeGame::generateMaze() {
         }
     }
     
-    // Make sure start and end are clear
     maze[playerPos.y][playerPos.x] = ' ';
     maze[endPos.y][endPos.x] = ' ';
     
-    // Add random paths based on difficulty
     int pathCount;
     switch (difficulty) {
         case Difficulty::EASY:
@@ -439,9 +424,6 @@ void MazeGame::generateMaze() {
         case Difficulty::HARD:
             pathCount = width * height / 15; // Fewer paths = harder
             break;
-        case Difficulty::CUSTOM:
-            pathCount = width * height / 12;
-            break;
     }
     
     for (int i = 0; i < pathCount; i++) {
@@ -452,7 +434,6 @@ void MazeGame::generateMaze() {
         }
     }
 
-    // Add enemies based on difficulty
     enemies.clear();
     int enemyCount;
     float enemySpeed;
@@ -469,10 +450,6 @@ void MazeGame::generateMaze() {
             enemyCount = 6;
             enemySpeed = 2.0f;
             break;
-        case Difficulty::CUSTOM:
-            enemyCount = 3;
-            enemySpeed = 1.25f;
-            break;
     }
 
     for (int i = 0; i < enemyCount; i++) {
@@ -484,10 +461,6 @@ void MazeGame::generateMaze() {
         
         enemies.emplace_back(pos, enemySpeed);
     }
-
-    // Reset stats for new maze
-    stats.moveCount = 0;
-    stats.timeElapsed = 0.0f;
 }
 
 void MazeGame::updateScore() {
@@ -502,23 +475,38 @@ void MazeGame::updateScore() {
         case Difficulty::HARD:
             multiplier = 2.0f;
             break;
-        case Difficulty::CUSTOM:
-            multiplier = 1.25f;
-            break;
     }
     
-    // Base score for completing the maze
-    stats.score += static_cast<int>(1000 * multiplier);
+    int mazeScore = static_cast<int>(1000 * multiplier);
+    mazeScore -= static_cast<int>(stats.timeElapsed * (10 * multiplier));
+    mazeScore -= static_cast<int>(stats.moveCount * (5 * multiplier));
     
-    // Deduct points for time and moves
-    stats.score -= static_cast<int>(stats.timeElapsed * (10 * multiplier));
-    stats.score -= static_cast<int>(stats.moveCount * (5 * multiplier));
+    if (mazeScore < 0) mazeScore = 0;
+    stats.score += mazeScore;
     
-    if (stats.score < 0) stats.score = 0;
-    
-    // Update high score if necessary
     if (stats.score > stats.highScore) {
         stats.highScore = stats.score;
         saveHighScore();
     }
+}
+
+void MazeGame::handleGameOver() {
+    if (stats.score > stats.highScore) {
+        stats.highScore = stats.score;
+        saveHighScore();
+    }
+    state = GameState::GAME_OVER;
+}
+
+bool MazeGame::isValidMove(const Point& pos) const {
+    if (pos.x < 0 || pos.x >= static_cast<int>(maze[0].size()) ||
+        pos.y < 0 || pos.y >= static_cast<int>(maze.size())) {
+        return false;
+    }
+    return maze[pos.y][pos.x] == ' ';
+}
+
+void MazeGame::movePlayer(const Point& newPos) {
+    playerPos = newPos;
+    stats.moveCount++;
 }

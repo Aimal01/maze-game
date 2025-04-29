@@ -235,20 +235,7 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: \
  /usr/include/SFML/Graphics/Glsl.hpp /usr/include/SFML/Graphics/Glsl.inl \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
- /usr/include/SFML/Graphics/VertexBuffer.hpp \
- /home/aimal/Downloads/maze_game/include/Point.hpp \
- /home/aimal/Downloads/maze_game/include/PowerUp.hpp \
- /home/aimal/Downloads/maze_game/include/Enemy.hpp \
- /home/aimal/Downloads/maze_game/include/ParticleSystem.hpp \
- /home/aimal/Downloads/maze_game/include/Button.hpp \
- /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
- /usr/include/c++/13/unordered_map \
- /usr/include/c++/13/bits/unordered_map.h \
- /usr/include/c++/13/bits/hashtable.h \
- /usr/include/c++/13/bits/hashtable_policy.h \
- /usr/include/c++/13/bits/enable_special_members.h \
- /usr/include/c++/13/array /usr/include/c++/13/compare \
- /usr/include/c++/13/memory \
+ /usr/include/SFML/Graphics/VertexBuffer.hpp /usr/include/c++/13/memory \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
  /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
  /usr/include/c++/13/bits/shared_ptr.h \
@@ -260,6 +247,17 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
+ /home/aimal/Downloads/maze_game/include/Point.hpp \
+ /home/aimal/Downloads/maze_game/include/Enemy.hpp \
+ /home/aimal/Downloads/maze_game/include/PowerUp.hpp \
+ /home/aimal/Downloads/maze_game/include/Button.hpp \
+ /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
+ /usr/include/c++/13/unordered_map \
+ /usr/include/c++/13/bits/unordered_map.h \
+ /usr/include/c++/13/bits/hashtable.h \
+ /usr/include/c++/13/bits/hashtable_policy.h \
+ /usr/include/c++/13/bits/enable_special_members.h \
+ /usr/include/c++/13/array /usr/include/c++/13/compare \
  /home/aimal/Downloads/maze_game/include/GameInfo.hpp \
  /usr/include/c++/13/iostream /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \

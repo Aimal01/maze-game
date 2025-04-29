@@ -12,5 +12,5 @@ public:
     }
 };
 
-const std::string GameInfo::CURRENT_DATE = "2025-04-29 06:23:14";
+const std::string GameInfo::CURRENT_DATE = "2025-04-29 07:13:49";
 const std::string GameInfo::CURRENT_USER = "Aimal01";

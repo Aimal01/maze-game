@@ -646,14 +646,9 @@ CMakeFiles/maze_game.dir/src/Enemy.cpp.o: /home/aimal/Downloads/maze_game/src/En
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
 CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src/MazeGame.cpp \
-  /home/aimal/Downloads/maze_game/include/Button.hpp \
   /home/aimal/Downloads/maze_game/include/Constants.hpp \
-  /home/aimal/Downloads/maze_game/include/Enemy.hpp \
   /home/aimal/Downloads/maze_game/include/GameInfo.hpp \
   /home/aimal/Downloads/maze_game/include/MazeGame.hpp \
-  /home/aimal/Downloads/maze_game/include/ParticleSystem.hpp \
-  /home/aimal/Downloads/maze_game/include/Point.hpp \
-  /home/aimal/Downloads/maze_game/include/PowerUp.hpp \
   /home/aimal/Downloads/maze_game/include/ResourceManager.hpp \
   /usr/include/SFML/Config.hpp \
   /usr/include/SFML/Graphics.hpp \
@@ -735,7 +730,6 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/c++/13/algorithm \
-  /usr/include/c++/13/array \
   /usr/include/c++/13/backward/auto_ptr.h \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
@@ -758,16 +752,14 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
   /usr/include/c++/13/bits/deque.tcc \
-  /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
+  /usr/include/c++/13/bits/fstream.tcc \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
-  /usr/include/c++/13/bits/hashtable.h \
-  /usr/include/c++/13/bits/hashtable_policy.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/ios_base.h \
   /usr/include/c++/13/bits/istream.tcc \
@@ -801,7 +793,6 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/c++/13/bits/specfun.h \
   /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
-  /usr/include/c++/13/bits/std_function.h \
   /usr/include/c++/13/bits/stl_algo.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
@@ -829,7 +820,6 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/c++/13/bits/stringfwd.h \
   /usr/include/c++/13/bits/uniform_int_dist.h \
   /usr/include/c++/13/bits/unique_ptr.h \
-  /usr/include/c++/13/bits/unordered_map.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
@@ -838,7 +828,6 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
-  /usr/include/c++/13/compare \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
@@ -857,7 +846,7 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
-  /usr/include/c++/13/functional \
+  /usr/include/c++/13/fstream \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
@@ -899,7 +888,6 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
-  /usr/include/c++/13/unordered_map \
   /usr/include/c++/13/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -991,8 +979,10 @@ CMakeFiles/maze_game.dir/src/MazeGame.cpp.o: /home/aimal/Downloads/maze_game/src
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
@@ -1637,7 +1627,6 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
   /home/aimal/Downloads/maze_game/include/Button.hpp \
   /home/aimal/Downloads/maze_game/include/Enemy.hpp \
   /home/aimal/Downloads/maze_game/include/MazeGame.hpp \
-  /home/aimal/Downloads/maze_game/include/ParticleSystem.hpp \
   /home/aimal/Downloads/maze_game/include/Point.hpp \
   /home/aimal/Downloads/maze_game/include/PowerUp.hpp \
   /usr/include/SFML/Config.hpp \
@@ -1962,9 +1951,15 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /home/aimal/Downloads/maze_game/src/main.cpp:
 
+/home/aimal/Downloads/maze_game/include/PowerUp.hpp:
+
 /home/aimal/Downloads/maze_game/src/ParticleSystem.cpp:
 
+/usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h:
+
 /usr/include/c++/13/pstl/glue_numeric_defs.h:
+
+/usr/include/c++/13/fstream:
 
 /usr/include/c++/13/cstdint:
 
@@ -1972,9 +1967,9 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 
 /usr/include/c++/13/bits/random.h:
 
-/usr/include/c++/13/bits/deque.tcc:
+/usr/include/c++/13/bits/fstream.tcc:
 
-/home/aimal/Downloads/maze_game/include/PowerUp.hpp:
+/usr/include/c++/13/bits/deque.tcc:
 
 /home/aimal/Downloads/maze_game/include/Constants.hpp:
 
@@ -2151,6 +2146,8 @@ CMakeFiles/maze_game.dir/src/main.cpp.o: /home/aimal/Downloads/maze_game/src/mai
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/SFML/Window/Export.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h:
 
 /usr/include/c++/13/typeinfo:
 
