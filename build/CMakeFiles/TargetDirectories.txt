@@ -1,0 +1,3 @@
+/home/aimal/Downloads/maze_game/build/CMakeFiles/maze_game.dir
+/home/aimal/Downloads/maze_game/build/CMakeFiles/edit_cache.dir
+/home/aimal/Downloads/maze_game/build/CMakeFiles/rebuild_cache.dir
